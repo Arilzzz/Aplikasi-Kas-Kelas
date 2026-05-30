@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using kas_kelas__2_.Config;
 using kas_kelas__2_.Models;
 using kas_kelas__2_.Controllers;
-using kas_kelas__2_.Helper;
+using kas_kelas__2_.Helpers;
 
 namespace kas_kelas__2_
 {
@@ -31,9 +31,49 @@ namespace kas_kelas__2_
         public UCTransaction()
         {
             InitializeComponent();
+            // CEK ROLE SAAT INIT
+            string role = SessionManager.GetRole();
+
+            if (role == "siswa")
+            {
+                // Untuk siswa: hanya tampilkan filter + data mereka
+                SetupStudentView();
+            }
+            else
+            {
+                // Untuk admin: tampilkan semua fitur
+                SetupAdminView();
+            }
+        }
+
+        private void SetupStudentView()
+        {
+            // ADDED: Setup untuk view siswa (read-only, hanya filter)
+            totalSaldo();
+            loadStudentPayments(); // Load hanya pembayaran siswa ini
+
+            // Sembunyikan input form untuk tambah/edit/delete
+            if (this.Controls.Find("btnSubmit", true).Length > 0)
+                this.Controls.Find("btnSubmit", true)[0].Visible = false;
+            if (this.Controls.Find("btnEdit", true).Length > 0)
+                this.Controls.Find("btnEdit", true)[0].Visible = false;
+            if (this.Controls.Find("btnDelete", true).Length > 0)
+                this.Controls.Find("btnDelete", true)[0].Visible = false;
+            if (this.Controls.Find("cbSiswa", true).Length > 0)
+                this.Controls.Find("cbSiswa", true)[0].Visible = false;
+            if (this.Controls.Find("txtJumlah", true).Length > 0)
+                this.Controls.Find("txtJumlah", true)[0].Visible = false;
+
+            // Tampilkan filter minggu saja
+            this.VisibleChanged += UCTransaction_VisibleChanged;
+            CreateWeekFilterControls();
+            InitializeMonthYearWeekDefaults();
+        }
+        private void SetupAdminView()
+        {
+            // ADDED: Setup untuk view admin (full CRUD + filter)
             totalSaldo();
             loadStudent();
-
             loadPayment();
             this.VisibleChanged += UCTransaction_VisibleChanged;
 
@@ -41,10 +81,133 @@ namespace kas_kelas__2_
             if (tb != null) tb.TextChanged += txtsearch_TextChanged;
 
             SetActionButtonsEnabled(false);
-
-            // create filter controls dynamically
             CreateWeekFilterControls();
             InitializeMonthYearWeekDefaults();
+        }
+        private void loadStudentPayments()
+        {
+            // ADDED: Load pembayaran untuk siswa yang sedang login
+            var student = SessionManager.GetStudent();
+            if (student == null) return;
+
+            using (SqlConnection conn = db.GetConnection())
+            {
+                conn.Open();
+
+                // Query pembayaran hanya untuk siswa ini
+                string query = @"
+                SELECT p.id, s.nama_siswa, s.nis, p.jumlah_pemasukkan, p.tanggal_pemasukkan
+                FROM pembayaran_kas p
+                JOIN data_students s ON p.data_student_id = s.id
+                WHERE p.data_student_id = @studentId
+                ORDER BY p.tanggal_pemasukkan DESC";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@studentId", student.id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Setup grid dengan custom headers
+                dgvPembayaran.AutoGenerateColumns = false;
+                dgvPembayaran.Columns.Clear();
+
+                dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "colId",
+                    DataPropertyName = "id",
+                    Visible = false
+                });
+
+                dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "colNamaSiswa",
+                    HeaderText = "Nama Siswa",
+                    DataPropertyName = "nama_siswa",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                });
+
+                dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "colNIS",
+                    HeaderText = "NIS",
+                    DataPropertyName = "nis",
+                    Width = 100
+                });
+
+                dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "colJumlah",
+                    HeaderText = "Jumlah",
+                    DataPropertyName = "jumlah_pemasukkan",
+                    Width = 120
+                });
+
+                dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "colTanggal",
+                    HeaderText = "Tanggal Pembayaran",
+                    DataPropertyName = "tanggal_pemasukkan",
+                    Width = 150
+                });
+
+                dgvPembayaran.DataSource = dt;
+                dgvPembayaran.ClearSelection();
+            }
+        }
+        private void loadPayment()
+        {
+            string q = null;
+            DataTable dt = getPayment(q);
+
+            dgvPembayaran.DataSource = null;
+            dgvPembayaran.Columns.Clear();
+            dgvPembayaran.AutoGenerateColumns = false;  // CHANGED
+
+            // Setup kolom secara manual dengan custom headers
+            dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colId",
+                DataPropertyName = "id",
+                Visible = false
+            });
+
+            dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNamaSiswa",
+                HeaderText = "Nama Siswa",  // CUSTOM HEADER
+                DataPropertyName = "nama_siswa",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            });
+
+            dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNIS",
+                HeaderText = "NIS",  // CUSTOM HEADER
+                DataPropertyName = "nis",
+                Width = 100
+            });
+
+            dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colJumlah",
+                HeaderText = "Jumlah",  // CUSTOM HEADER
+                DataPropertyName = "jumlah_pemasukkan",
+                Width = 120
+            });
+
+            dgvPembayaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colTanggal",
+                HeaderText = "Tanggal Pembayaran",  // CUSTOM HEADER
+                DataPropertyName = "tanggal_pemasukkan",
+                Width = 150
+            });
+
+            dgvPembayaran.DataSource = dt;
+            dgvPembayaran.ClearSelection();
+            SetActionButtonsEnabled(false);
         }
 
         private void loadStudent()
@@ -101,20 +264,24 @@ namespace kas_kelas__2_
         }
         private void CreateWeekFilterControls()
         {
-            // place controls relative to dtTanggal if exists, else place at top-left
+            // DIPINDAHKAN: Sekarang filter ditempatkan di atas form (lebih tinggi)
+            // Anda bisa menyesuaikan posisi Y sesuai dengan garis kuning di desain Anda
+
             var baseCtrl = this.Controls.Find("dtTanggal", true).FirstOrDefault();
             var baseX = baseCtrl != null ? baseCtrl.Location.X : 8;
-            var baseY = baseCtrl != null ? baseCtrl.Location.Y : 8;
+            var baseY = 95; // CHANGED: Ubah Y position untuk ditempatkan di garis kuning
+                            // Jika garis kuning lebih atas, kurangi nilai ini. Jika lebih bawah, tambahkan.
 
             cbMonthFilter = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 110 };
             cbYearFilter = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 70 };
             cbWeekFilter = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 200 };
             lblWeeklyTotal = new Label { AutoSize = true };
 
-            cbMonthFilter.Location = new Point(baseX + 220, baseY);
-            cbYearFilter.Location = new Point(baseX + 340, baseY);
-            cbWeekFilter.Location = new Point(baseX + 420, baseY);
-            lblWeeklyTotal.Location = new Point(baseX + 640, baseY + 4);
+            // CHANGED: Posisi X dan Y diatur untuk garis kuning
+            cbMonthFilter.Location = new Point(baseX, baseY);
+            cbYearFilter.Location = new Point(baseX + 130, baseY);
+            cbWeekFilter.Location = new Point(baseX + 220, baseY);
+            lblWeeklyTotal.Location = new Point(baseX + 440, baseY + 4);
 
             cbMonthFilter.SelectedIndexChanged += Filter_SelectionChanged;
             cbYearFilter.SelectedIndexChanged += Filter_SelectionChanged;
@@ -196,6 +363,16 @@ namespace kas_kelas__2_
         private DataTable getPayment(string q = null)
         {
             return tr.GetPayments(q);
+        }
+        private void UCTransaction_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                // Refresh semua data saat tab ditampilkan
+                totalSaldo();  // Update saldo
+                loadPayment();  // Refresh grid pembayaran
+                loadStudent();  // Refresh student list
+            }
         }
 
         private void loadPayment(string q = null)
@@ -341,18 +518,6 @@ namespace kas_kelas__2_
             catch (Exception ex)
             {
                 MessageBox.Show("Error saat menambahkan data: " + ex.Message);
-            }
-        }
-        private void UCTransaction_VisibleChanged(object sender, EventArgs e)
-        {
-            // trigger auto-load setiap kali UC ditampilkan
-            if (this.Visible)
-            {
-
-                loadStudent();
-                loadPayment();
-                clearForm();
-                PopulateWeeksFromSelection();
             }
         }
 

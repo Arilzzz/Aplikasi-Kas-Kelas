@@ -9,32 +9,57 @@ namespace kas_kelas__2_.Helpers
 {
     public static class SessionManager
     {
-        public static string Role { get; private set; }
-        public static UsersModel CurrentUser { get; private set; }
-        public static StudentsModel CurrentStudent { get; private set; }
+        // Private static variables untuk menyimpan session
+        private static UsersModel _currentAdmin = null;
+        private static StudentsModel _currentStudent = null;
 
-        public static void SetAdmin(UsersModel user)
+        // ADMIN SESSION
+        public static void SetAdmin(UsersModel admin)
         {
-            Role = "admin";
-            CurrentUser = user;
-            CurrentStudent = null;
+            _currentAdmin = admin;
+            _currentStudent = null; // Clear student session
         }
 
+        public static UsersModel GetAdmin()
+        {
+            return _currentAdmin;
+        }
+
+        public static bool IsAdmin()
+        {
+            return _currentAdmin != null;
+        }
+
+        // STUDENT SESSION
         public static void SetStudent(StudentsModel student)
         {
-            Role = "student";
-            CurrentStudent = student;
-            CurrentUser = null;
+            _currentStudent = student;
+            _currentAdmin = null; // Clear admin session
         }
 
-        public static void Clear()
+        public static StudentsModel GetStudent()
         {
-            Role = null;
-            CurrentUser = null;
-            CurrentStudent = null;
+            return _currentStudent;
         }
 
-        public static bool IsAdmin() => string.Equals(Role, "admin");
-        public static bool IsStudent() => string.Equals(Role, "student");
+        public static bool IsStudent()
+        {
+            return _currentStudent != null;
+        }
+
+        // Clear session (untuk logout)
+        public static void ClearSession()
+        {
+            _currentAdmin = null;
+            _currentStudent = null;
+        }
+
+        // Get current role
+        public static string GetRole()
+        {
+            if (_currentAdmin != null) return "admin";
+            if (_currentStudent != null) return "siswa";
+            return "guest";
+        }
     }
 }

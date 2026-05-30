@@ -27,29 +27,66 @@ namespace kas_kelas__2_
         public UC_Budget()
         {
             InitializeComponent();
-            // ensure grid selection mode and event wiring
             dgvPengeluaran.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPengeluaran.MultiSelect = false;
             dgvPengeluaran.CellClick += dgvPengeluaran_CellContentClick_1;
-            //dgvPengeluaran.BorderStyle = BorderStyle.None;
-            //dgvPengeluaran.BackgroundColor = Color.White;
-            //dgvPengeluaran.EnableHeadersVisualStyles = false;
 
-            //dgvPengeluaran.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(79, 70, 229);
-            //dgvPengeluaran.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            // ADDED: Auto-load ketika UC visible
+            this.VisibleChanged += UC_Budget_VisibleChanged;
 
             tampilData();
             clearForm();
         }
 
+        private void UC_Budget_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                tampilData();
+            }
+        }
+
+        private void SetupGridColumns()
+        {
+            dgvPengeluaran.AutoGenerateColumns = false;
+            dgvPengeluaran.Columns.Clear();
+
+            dgvPengeluaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colId",
+                DataPropertyName = "id",
+                Visible = false
+            });
+
+            dgvPengeluaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colTanggal",
+                HeaderText = "Tanggal",  // CUSTOM HEADER
+                DataPropertyName = "tanggal_pengeluaran",
+                Width = 120
+            });
+
+            dgvPengeluaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colJumlah",
+                HeaderText = "Jumlah Pengeluaran",  // CUSTOM HEADER
+                DataPropertyName = "jumlah_pengeluaran",
+                Width = 150
+            });
+
+            dgvPengeluaran.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colKeterangan",
+                HeaderText = "Keterangan",  // CUSTOM HEADER
+                DataPropertyName = "keterangan",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            });
+        }
         private void tampilData()
         {
+            SetupGridColumns();  // ADDED
             DataTable dt = bt.GetAll();
             dgvPengeluaran.DataSource = dt;
-
-            if (dgvPengeluaran.Columns.Count > 0)
-                dgvPengeluaran.Columns[0].Visible = false;
-
             dgvPengeluaran.ClearSelection();
         }
 
@@ -253,5 +290,6 @@ namespace kas_kelas__2_
             }
             else pbUpload.Image = null;
         }
+
     }
 }

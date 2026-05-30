@@ -1,5 +1,5 @@
 ﻿using kas_kelas__2_.Config;
-using kas_kelas__2_.Helper;
+using kas_kelas__2_.Helpers;
 using kas_kelas__2_.Models;
 using System;
 using System.Collections.Generic;
@@ -103,6 +103,8 @@ namespace kas_kelas__2_.Controllers
                 {
                     var dt = new DataTable();
                     da.Fill(dt);
+                    if (dt.Columns.Contains("data_student_id"))
+                        dt.Columns.Remove("data_student_id");
                     return dt;
                 }
             }

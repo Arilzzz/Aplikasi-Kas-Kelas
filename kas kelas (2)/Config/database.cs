@@ -11,7 +11,7 @@ namespace kas_kelas__2_.Config
     public class Database
     {
         private string connectionString =
-            "Data Source=MSI\\SQLEXPRESS;" +    
+            "Data Source=DESKTOP-8GGN937;" +    
             "Initial Catalog=dbkaskelas;" +
             "Integrated Security=True";
 

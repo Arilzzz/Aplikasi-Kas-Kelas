@@ -1,33 +1,20 @@
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).exe.config
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).exe
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).pdb
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.AssemblyReference.cache
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.Form1.resources
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.Properties.Resources.resources
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.GenerateResource.cache
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.CoreCompileInputs.cache
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).exe
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).pdb
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).exe.config
-C:\TUGAS PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.dashboard.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).exe
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\CircularProgressBar.dll
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\WinFormAnimation.dll
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).exe.config
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\CircularProgressBar.xml
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.AssemblyReference.cache
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.dashboard.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.Form1.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.Properties.Resources.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Budget.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Dashboard.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Student_List.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.UCTransaction.resources
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.GenerateResource.cache
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).csproj.CoreCompileInputs.cache
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kela.06F09492.Up2Date
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).exe
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).pdb
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas kelas (2).exe.config
-D:\PCC\kas kelas (2)\kas kelas (2)\bin\Debug\kas kelas (2).pdb
-D:\PCC\kas kelas (2)\kas kelas (2)\obj\Debug\kas_kelas__2_.LoginStudent.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\kas kelas (2).exe.config
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\kas kelas (2).exe
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\kas kelas (2).pdb
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\CircularProgressBar.dll
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\WinFormAnimation.dll
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\bin\Debug\CircularProgressBar.xml
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).csproj.AssemblyReference.cache
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.dashboard.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.Form1.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.LoginStudent.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.Properties.Resources.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Budget.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Dashboard.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.UC_Student_List.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas_kelas__2_.UCTransaction.resources
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).csproj.GenerateResource.cache
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).csproj.CoreCompileInputs.cache
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kela.06F09492.Up2Date
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).exe
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).pdb

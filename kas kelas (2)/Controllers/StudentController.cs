@@ -18,7 +18,7 @@ namespace kas_kelas__2_.Controllers
         {
             using (var conn = db.GetConnection())
             using (var da = new SqlDataAdapter("SELECT id, nama_siswa, " +
-                "nis FROM data_students ORDER BY id DESC", conn))
+                "nis FROM data_students ORDER BY nama_siswa ASC", conn))
             {
                 var dt = new DataTable();
                 da.Fill(dt);
@@ -34,7 +34,7 @@ namespace kas_kelas__2_.Controllers
                     SELECT id, nama_siswa, nis
                     FROM data_students
                     WHERE nama_siswa LIKE @q OR nis LIKE @q
-                    ORDER BY id DESC";
+                    ORDER BY nama_siswa ASC";
                 cmd.Parameters.AddWithValue("@q", "%" + q + "%");
                 using (var da = new SqlDataAdapter(cmd))
                 {

@@ -60,27 +60,28 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(16, 49);
+            this.label2.Location = new System.Drawing.Point(12, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(527, 52);
+            this.label2.Size = new System.Drawing.Size(419, 42);
             this.label2.TabIndex = 21;
             this.label2.Text = "EXPENSE MANAGEMENT";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(19, 14);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
+            this.textBox1.Size = new System.Drawing.Size(151, 20);
             this.textBox1.TabIndex = 19;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(756, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(567, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 18);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -88,10 +89,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(797, 17);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(598, 14);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(29, 22);
+            this.pictureBox6.Size = new System.Drawing.Size(22, 18);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 22;
             this.pictureBox6.TabStop = false;
@@ -99,53 +100,58 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::kas_kelas__2_.Properties.Resources.search__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(244, 17);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(183, 14);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox5.Size = new System.Drawing.Size(16, 17);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
             // txtKeterangan
             // 
-            this.txtKeterangan.Location = new System.Drawing.Point(28, 139);
+            this.txtKeterangan.Location = new System.Drawing.Point(21, 113);
+            this.txtKeterangan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKeterangan.Multiline = true;
             this.txtKeterangan.Name = "txtKeterangan";
-            this.txtKeterangan.Size = new System.Drawing.Size(425, 67);
+            this.txtKeterangan.Size = new System.Drawing.Size(320, 55);
             this.txtKeterangan.TabIndex = 24;
             // 
             // txtJumlah
             // 
-            this.txtJumlah.Location = new System.Drawing.Point(28, 228);
+            this.txtJumlah.Location = new System.Drawing.Point(21, 185);
+            this.txtJumlah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtJumlah.Name = "txtJumlah";
-            this.txtJumlah.Size = new System.Drawing.Size(141, 22);
+            this.txtJumlah.Size = new System.Drawing.Size(107, 20);
             this.txtJumlah.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 116);
+            this.label1.Location = new System.Drawing.Point(19, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "Description";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(250, 209);
+            this.label3.Location = new System.Drawing.Point(188, 170);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 28;
             this.label3.Text = "Date";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 209);
+            this.label4.Location = new System.Drawing.Point(19, 170);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 29;
             this.label4.Text = "Amount";
             // 
@@ -153,9 +159,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 338);
+            this.label5.Location = new System.Drawing.Point(19, 275);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 23);
+            this.label5.Size = new System.Drawing.Size(120, 19);
             this.label5.TabIndex = 31;
             this.label5.Text = "Riwayat Transaksi";
             // 
@@ -163,11 +170,12 @@
             // 
             this.dgvPengeluaran.BackgroundColor = System.Drawing.Color.White;
             this.dgvPengeluaran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPengeluaran.Location = new System.Drawing.Point(25, 387);
+            this.dgvPengeluaran.Location = new System.Drawing.Point(19, 314);
+            this.dgvPengeluaran.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPengeluaran.Name = "dgvPengeluaran";
             this.dgvPengeluaran.RowHeadersWidth = 51;
             this.dgvPengeluaran.RowTemplate.Height = 24;
-            this.dgvPengeluaran.Size = new System.Drawing.Size(787, 249);
+            this.dgvPengeluaran.Size = new System.Drawing.Size(590, 202);
             this.dgvPengeluaran.TabIndex = 32;
             this.dgvPengeluaran.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPengeluaran_CellClick);
             this.dgvPengeluaran.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPengeluaran_CellContentClick_1);
@@ -178,10 +186,10 @@
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.Color.Black;
-            this.btnTambah.Location = new System.Drawing.Point(29, 275);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTambah.Location = new System.Drawing.Point(22, 223);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(182, 44);
+            this.btnTambah.Size = new System.Drawing.Size(136, 36);
             this.btnTambah.TabIndex = 37;
             this.btnTambah.Text = "Simpan Pengeluaran";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -189,9 +197,10 @@
             // 
             // dtTanggal
             // 
-            this.dtTanggal.Location = new System.Drawing.Point(253, 226);
+            this.dtTanggal.Location = new System.Drawing.Point(190, 184);
+            this.dtTanggal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtTanggal.Name = "dtTanggal";
-            this.dtTanggal.Size = new System.Drawing.Size(200, 22);
+            this.dtTanggal.Size = new System.Drawing.Size(151, 20);
             this.dtTanggal.TabIndex = 38;
             // 
             // btnEdit
@@ -201,10 +210,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(582, 327);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(436, 266);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 44);
+            this.btnEdit.Size = new System.Drawing.Size(75, 36);
             this.btnEdit.TabIndex = 39;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -217,10 +226,10 @@
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.Black;
-            this.btnHapus.Location = new System.Drawing.Point(712, 327);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHapus.Location = new System.Drawing.Point(534, 266);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(100, 44);
+            this.btnHapus.Size = new System.Drawing.Size(75, 36);
             this.btnHapus.TabIndex = 40;
             this.btnHapus.Text = "Delete";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -228,9 +237,10 @@
             // 
             // pbUpload
             // 
-            this.pbUpload.Location = new System.Drawing.Point(490, 139);
+            this.pbUpload.Location = new System.Drawing.Point(368, 113);
+            this.pbUpload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbUpload.Name = "pbUpload";
-            this.pbUpload.Size = new System.Drawing.Size(322, 166);
+            this.pbUpload.Size = new System.Drawing.Size(242, 135);
             this.pbUpload.TabIndex = 41;
             this.pbUpload.TabStop = false;
             // 
@@ -241,10 +251,10 @@
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.Black;
-            this.btnUpload.Location = new System.Drawing.Point(712, 76);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpload.Location = new System.Drawing.Point(534, 62);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(100, 44);
+            this.btnUpload.Size = new System.Drawing.Size(75, 36);
             this.btnUpload.TabIndex = 42;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
@@ -253,15 +263,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(491, 116);
+            this.label6.Location = new System.Drawing.Point(368, 94);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
+            this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 43;
             this.label6.Text = "Upload Foto";
             // 
             // UC_Budget
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUpload);
@@ -282,8 +293,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_Budget";
-            this.Size = new System.Drawing.Size(845, 660);
+            this.Size = new System.Drawing.Size(634, 536);
+            this.VisibleChanged += new System.EventHandler(this.UC_Budget_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

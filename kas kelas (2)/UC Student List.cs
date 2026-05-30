@@ -25,7 +25,7 @@ namespace kas_kelas__2_
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT * FROM data_students";
+                string query = "SELECT * FROM data_students ORDER BY nama_siswa ASC";  // CHANGED
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -33,10 +33,40 @@ namespace kas_kelas__2_
             }
         }
 
+        private void SetupGridColumns()
+        {
+            dgvStudent.AutoGenerateColumns = false;
+            dgvStudent.Columns.Clear();
+
+            // Kolom Nama
+            dgvStudent.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colId",
+                DataPropertyName = "id",
+                Visible = false
+            });
+
+            dgvStudent.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNamaSiswa",
+                HeaderText = "Nama Siswa",  // CUSTOM HEADER
+                DataPropertyName = "nama_siswa",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            });
+
+            dgvStudent.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNIS",
+                HeaderText = "NIS",  // CUSTOM HEADER
+                DataPropertyName = "nis",
+                Width = 120
+            });
+        }
+
         private void LoadData()
         {
+            SetupGridColumns();  // ADDED
             dgvStudent.DataSource = sc.GetAll();
-            if (dgvStudent.Columns.Count > 0) dgvStudent.Columns[0].Visible = false;
             dgvStudent.ClearSelection();
         }
         public UC_Student_List()
@@ -66,16 +96,16 @@ namespace kas_kelas__2_
         {
             if (e.RowIndex < 0) return;
             var row = dgvStudent.Rows[e.RowIndex];
-            id = row.DataGridView.Columns.Contains("id")
-                ? Convert.ToInt32(row.Cells["id"].Value)
+            id = row.DataGridView.Columns.Contains("colId")
+                ? Convert.ToInt32(row.Cells["colId"].Value)
                 : Convert.ToInt32(row.Cells[0].Value);
 
-            txtNama.Text = row.DataGridView.Columns.Contains("nama_siswa")
-                ? row.Cells["nama_siswa"].Value?.ToString()
+            txtNama.Text = row.DataGridView.Columns.Contains("colNamaSiswa")
+                ? row.Cells["colNamaSiswa"].Value?.ToString()
                 : row.Cells[1].Value?.ToString();
 
-            txtNis.Text = row.DataGridView.Columns.Contains("nis")
-                ? row.Cells["nis"].Value?.ToString()
+            txtNis.Text = row.DataGridView.Columns.Contains("colNIS")
+                ? row.Cells["colNIS"].Value?.ToString()
                 : row.Cells[2].Value?.ToString();
         }
         private void btnAddStudent_Click(object sender, EventArgs e)
@@ -104,11 +134,6 @@ namespace kas_kelas__2_
             ClearForm();
         }
 
-        private void btnload_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
         private void ClearForm()
         {
             id = 0;
@@ -120,6 +145,7 @@ namespace kas_kelas__2_
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             var q = (sender as TextBox)?.Text?.Trim();
+            SetupGridColumns();  // ADDED
             if (string.IsNullOrEmpty(q))
             {
                 dgvStudent.DataSource = sc.GetAll();
@@ -129,9 +155,7 @@ namespace kas_kelas__2_
                 dgvStudent.DataSource = sc.Search(q);
             }
 
-            if (dgvStudent.Columns.Count > 0) dgvStudent.Columns[0].Visible = false;
             dgvStudent.ClearSelection();
         }
-
     }
 }

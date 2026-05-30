@@ -71,7 +71,6 @@
     </Compile>
     <Compile Include="Helpers\SessionManager.cs" />
     <Compile Include="Helpers\WeekHelper.cs" />
-    <Compile Include="Helper\WeekInfo.cs" />
     <Compile Include="LoginStudent.cs">
       <SubType>Form</SubType>
     </Compile>

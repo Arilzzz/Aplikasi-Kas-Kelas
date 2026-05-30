@@ -18,6 +18,9 @@ namespace kas_kelas__2_
 
         private void cekRole()
         {
+            // AMBIL ROLE DARI SESSION MANAGER
+            role = SessionManager.GetRole();
+
             // JIKA SISWA
             if (role == "siswa")
             {
@@ -27,14 +30,27 @@ namespace kas_kelas__2_
                 pictureBox5.Visible = false;
                 pictureBox4.Visible = false;
                 pictureBox3.Visible = false;
+
+                // Tampilkan info siswa yang login
+                DisplayStudentInfo();
             }
-            
             // JIKA ADMIN
             else if (role == "admin")
             {
                 btnTransaction.Visible = true;
                 btnBudgets.Visible = true;
                 btnStudent.Visible = true;
+            }
+        }
+
+        private void DisplayStudentInfo()
+        {
+            // ADDED: Tampilkan nama siswa yang login
+            var student = SessionManager.GetStudent();
+            if (student != null)
+            {
+                // Jika ada label untuk menampilkan nama siswa, set di sini
+                // contoh: lblStudentName.Text = student.nama_siswa;
             }
         }
 
@@ -90,18 +106,25 @@ namespace kas_kelas__2_
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            SessionManager.Clear();
-            Form1 login = new Form1();
-            login.Show();
+            SessionManager.ClearSession();
             this.Hide();
+
+            // Kembali ke login sesuai role
+            if (role == "siswa")
+            {
+                LoginStudent loginForm = new LoginStudent();
+                loginForm.Show();
+            }
+            else if (role == "admin")
+            {
+                Form1 loginForm = new Form1();
+                loginForm.Show();
+            }
+
+            this.Close();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelIsi_Paint(object sender, PaintEventArgs e)
         {
 
         }
