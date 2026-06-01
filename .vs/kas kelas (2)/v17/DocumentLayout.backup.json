@@ -11,12 +11,8 @@
       "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\uc dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\loginstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\loginstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\uc transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\uc transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\helpers\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\helpers\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +23,12 @@
       "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\helpers\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\helpers\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\loginstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\loginstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\uc transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|solutionrelative:kas kelas (2)\\uc transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1B01E30-55DF-4539-AAFF-69D3436E4773}|kas kelas (2)\\kas kelas (2).csproj|D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "dashboard.cs [Design]",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\dashboard.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\dashboard.cs",
@@ -154,7 +154,8 @@
               "RelativeToolTip": "kas kelas (2)\\dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T03:31:25.999Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -162,8 +163,8 @@
               "Title": "UC Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\UC Dashboard.cs",
-              "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs [Design]",
-              "RelativeToolTip": "kas kelas (2)\\UC Dashboard.cs [Design]",
+              "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs [Design]*",
+              "RelativeToolTip": "kas kelas (2)\\UC Dashboard.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T05:56:01.544Z",
               "IsPinned": true,
@@ -207,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LoginStudent.cs [Design]",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\LoginStudent.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\LoginStudent.cs",
@@ -244,16 +245,16 @@
               "Title": "UC Dashboard.cs",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\UC Dashboard.cs",
-              "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs",
-              "RelativeToolTip": "kas kelas (2)\\UC Dashboard.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAQBAAArAAAAAAAAAA==",
+              "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Dashboard.cs*",
+              "RelativeToolTip": "kas kelas (2)\\UC Dashboard.cs*",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAgBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T07:56:29.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "UC Transaction.cs",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\UC Transaction.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\UC Transaction.cs",
@@ -277,27 +278,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "SessionManager.cs",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\Helpers\\SessionManager.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\Helpers\\SessionManager.cs",
               "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\Helpers\\SessionManager.cs",
               "RelativeToolTip": "kas kelas (2)\\Helpers\\SessionManager.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T10:30:05.643Z"
+              "WhenOpened": "2026-05-28T10:30:05.643Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "dashboard.cs",
               "DocumentMoniker": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\dashboard.cs",
               "RelativeDocumentMoniker": "kas kelas (2)\\dashboard.cs",
               "ToolTip": "D:\\Project Akhir PCC\\Kas-Kelas-Dekstop\\kas kelas (2)\\dashboard.cs",
               "RelativeToolTip": "kas kelas (2)\\dashboard.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAqwHEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T07:47:00.986Z"
+              "WhenOpened": "2026-05-24T07:47:00.986Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -345,7 +348,8 @@
               "RelativeToolTip": "kas kelas (2)\\dashboard.Designer.cs",
               "ViewState": "AgIAAOQAAAAAAAAAAADwv+sAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:23:31.665Z"
+              "WhenOpened": "2026-05-26T09:23:31.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

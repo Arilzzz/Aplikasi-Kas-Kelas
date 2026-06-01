@@ -18,3 +18,4 @@ D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).csp
 D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kela.06F09492.Up2Date
 D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).exe
 D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).pdb
+D:\Project Akhir PCC\Kas-Kelas-Dekstop\kas kelas (2)\obj\Debug\kas kelas (2).exe.config

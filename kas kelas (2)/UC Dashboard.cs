@@ -264,6 +264,7 @@ namespace kas_kelas__2_
             lblAdminSiswa.Text = $"Selamat datang, {users.username}!";
         }
 
+
         private void GetStudentBalance(int studentId)
         {
             // ADDED: Hitung saldo untuk siswa ini (total pembayaran)
